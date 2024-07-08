@@ -191,7 +191,7 @@ body
     footer
     {
         font-size: 0.4em !important;
-        width: 110vw !important;
+        width: 100vw !important;
         display: flex;
         flex-direction: column;
     }
