@@ -204,6 +204,12 @@ body
     {
         font-size: 5em !important
     }
+    .header
+    {
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        width: 100%;
+    }
 }
 
 @media (min-width: 952px)
