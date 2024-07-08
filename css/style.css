@@ -1,0 +1,648 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    color: #000000;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.header
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 70vw;
+    height: 9vh;
+    max-height: 10vh;
+    padding: 2vw 0vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 90;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 1vw;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 1%;
+}
+
+.logo
+{
+    text-decoration: none;
+    font-size: 3.5vw;
+    font-weight: 900;
+    background-image: linear-gradient(34deg, #e9e9e9 0%, #353535 45%, #000000 100%);
+    background-clip: text;
+    color: transparent;
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    z-index: -2;
+    transition: color 0.5s cubic-bezier(1,-0.01,0,1.02);
+}
+
+.logo:hover
+{
+    color: black;
+}
+
+.navbar a
+{
+    font-size: 1.5vw;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s all;
+}
+
+.navbar a:hover
+{
+    background-image: linear-gradient(-180deg, #e9e9e9 0%, #959595 45%, #525252 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.sec
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 10%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.home-content
+{
+    max-width: 40vw;
+}
+
+.home-content h1
+{
+    font-size: 4em;
+    background-image: linear-gradient(34deg, #e9e9e9 0%, #353535 45%, #000000 100%);
+    background-clip: text;
+    color: transparent;
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20%;
+    width: 6.1em;
+}
+
+.home-content h3
+{
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.home-content p
+{
+    font-size: 1.1em;
+    margin-bottom: 5%;
+}
+
+.home-content a
+{
+    font-size: 1.7vw;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0.5rem 32px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+}
+
+.home-content .btn-box a
+{
+    padding: 2%;
+}
+
+.home-content a:hover
+{
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.37);
+    color: #ffffff;
+}
+
+.hdd
+{
+    font-size: medium;
+    margin: 0px;
+    display: inline;
+    visibility: hidden;
+}
+
+.social
+{
+    margin-top: 4%;
+    position: absolute;
+}
+
+.social a
+{
+    margin-right: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0);
+    padding: 7px;
+}
+
+.container
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    display: inline;
+    z-index: -100;
+}
+
+.bubbles
+{
+    position: absolute;
+    display:inline-flex;
+}
+
+.bubbles span
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(174, 174, 174, 0.462),
+    0 0 50px white, 
+    0 0 100px white ;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even)
+{
+    background: #787878;
+    box-shadow: 0 0 10px #78787844,
+    0 0 50px #787878, 
+    0 0 100px #787878;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.imgdiv
+{
+    position:relative;
+    left: 8.2%; 
+    width: 500px;
+    height: 500px;
+    transition: all 0.5s;
+    perspective: 900px;
+    animation: card 2s cubic-bezier(1,-0.01,0,1.02);
+}
+
+.myimg
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid
+    rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transform-style: preserve-3d;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+}
+
+.myimg:hover
+{
+    transform: translateZ(100px);
+    box-shadow: 0 80px 320px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(20px);
+}
+
+.imgdiv:hover
+{
+    z-index: 100;
+}
+
+@keyframes card 
+{
+    0%{
+        left: 1000px; 
+    }    
+
+    100%{
+        left: 8.2%; 
+    }
+} 
+
+.shr
+{
+ width: 100%;
+ height: 100px;
+ background-color: #000000;
+}
+
+.about
+{
+    perspective: 1000px;
+}
+
+.bg01
+{
+    left: -51%;
+    position:relative;
+    width: 39%;
+    height: 70%;
+    perspective: 244px;
+    z-index: 0;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+}
+
+.bg011
+{
+    position: absolute;
+    width: 250%;
+    height: 105%;
+    top: 8%;
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.18);
+    border-right:1px solid transparent;
+    border-left:1px solid transparent;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transform-style: preserve-3d;
+    background-size: cover;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+    background-image: url(../images/Person.png);
+    background-size: 43%;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    transition: all 1s;
+}
+
+.bg011:hover
+{
+    backdrop-filter: blur(50px);
+}
+
+.about-content
+{
+    max-width: 40vw;
+    transition: all 1s cubic-bezier(1,-0.01,0,1.02);
+    width: 100%;
+    z-index: 1;
+}
+
+.about-content h3
+{
+    font-size: 3em;
+    margin-bottom: 10%;
+    color: #000000;
+    margin-bottom: 10%;
+    background-image: linear-gradient(150deg, #9b9b9b 0%, #000000 45%, #000000 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.about-content li
+{
+    margin-bottom: 3%;
+    font-size: 1.5vw;
+    color: #000000;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 4%;
+    font-weight: 400;
+}
+
+ul .fa-solid
+{
+    margin: 3%;
+}
+
+.space
+{
+    background-image: url(../images/space.png);
+    position: absolute;
+    height: 1400px;
+    width: 1400px;
+    animation: 20s infinite space linear;
+    z-index: -1;
+}
+
+@keyframes space
+{
+    0%
+    {
+        transform: rotateZ(0deg);
+    }
+    25%
+    {
+        transform: rotateZ(90deg);
+    }
+    50%
+    {
+        transform: rotateZ(180deg);
+    }
+    75%
+    {
+        transform: rotateZ(270deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg);
+    }
+}
+
+.cer
+{
+    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cer .des
+{
+    top: 18%;
+    position: absolute;
+    font-size: 3.5em;
+    background-image: linear-gradient(150deg, #9b9b9b 0%, #000000 45%, #000000 100%);
+    background-clip: text;
+    color: transparent;
+    z-index: 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 20px;
+    transition: all 1s cubic-bezier(1,-0.01,0,1.02);
+    margin-top: 110px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s cubic-bezier(1,-0.01,0,1.02);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    z-index: 101;
+}
+
+.flip-card-back h2
+{
+    margin-top: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover
+{
+    width: 720px;
+    animation: blur 1s forwards;
+}
+
+@keyframes blur
+{
+    from{
+        backdrop-filter: blur(10px);
+    }
+    to{
+        backdrop-filter: blur(20px);
+    }
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front img
+{
+    width: 160px;
+    height: 160px;
+}
+
+.flip-card-front .mah
+{
+    top: -25px;
+    position: relative;
+    left: 0px;
+}
+
+.flip-card-front h3
+{
+    top: 15px;
+    position: relative;
+    left: 0px;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.back-img img
+{
+    width: 320px;
+    top: 30px;
+    left: -50px;
+    position: relative;
+}
+
+.back-content
+{
+    display: flex;
+    flex-direction: column
+}
+
+.back-content h2
+{
+    margin-bottom: 20px;
+}
+
+.back-content .ci
+{
+    margin-left: 10px;
+}
+
+.back-content h3
+{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.showcer a
+{
+    font-size: 1.7vw;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s;
+    backdrop-filter: blur(8px);
+    background-color: rgba(6, 6, 6, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    padding: 7px;
+    top: 20px;
+    left: 6px;
+}
+
+.showcer a:hover
+{
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.37);
+    color: #000000;
+}
+
+footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: #000000;
+    /* justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap; */
+}
+
+footer .links
+{
+    display: flex;
+    justify-content: center;
+}
+
+footer .links a
+{
+    font-size: 70px;
+    text-decoration: none;
+    margin: 20px 20px 0 20px;
+    color: #ffffff;
+    transition: all 1s cubic-bezier(1,-0.01,0,1.02);
+}
+
+footer .links a:hover
+{
+    color: #969696;
+}
+
+footer nav
+{
+    margin: 30px 0px;
+}
+
+footer nav ul
+{
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li,a
+{
+    color: #ffffff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    list-style-type: none;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+}
+
+footer nav ul li:hover a
+{
+    background-image: linear-gradient(-180deg, #e9e9e9 0%, #959595 45%, #525252 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.fff
+{
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.fff p
+{
+    color: #ffffff;
+}
+
+.fff p a
+{
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.5s cubic-bezier(1,-0.01,0,1.02);
+}
+
+.fff p a:hover
+{
+    background-color: #000000;
+    color: #ffffff; 
+}
+
+::selection
+{
+    color: #ffffff;
+    background-color: #000000;
+}
