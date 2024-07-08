@@ -32,10 +32,200 @@ body
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    border-radius: 1vw;
+    border-radius: 20px;
     margin-left: 12.5%;
     margin-right: 12.5%;
     margin-top: 1%;
+}
+
+.checkbtn
+{
+    font-size: 30px;
+    color: #000000;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+    transition: all 1s cubic-bezier(1,-0.01,0,1.02);
+}
+
+#check
+{
+    display: none;
+}
+
+@media (max-width: 952px)
+{
+    .logo
+    {
+        font-size: 3em !important;
+    }
+    .navbar a
+    {
+        font-size: 1vw;
+    }
+    .home
+    {
+        align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: no-wrap;
+        justify-content: center;
+    }
+    .imgdiv
+    {
+        display: none;
+    }
+    .home-content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .home-content h1
+    {
+        font-size: 13vw !important;
+        text-align: center;
+    }
+    .home-content h3
+    {
+        font-size: 5vw !important;
+        width: 385px !important;
+        text-align: center;
+    }
+    .home-content a
+    {
+        font-size: 5vw !important;
+        width: 385px !important;
+        text-align: center;
+        width: 200px !important;
+        margin-right: 0px !important;
+    }
+    .social
+    {
+        top: 27vh !important;
+        display: flex;
+        margin-top: 0px !important;
+    }
+    .social a
+    {
+        width: 20vw !important;
+    }
+    .hdd
+    {
+        display: none !important;
+    }
+    .btn-box
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .home-content p
+    {
+        font-size: 3vw !important;
+        width: 160% !important;
+        text-align: center;
+    }
+    .container
+    {
+        height: 500vh !important;
+    }
+
+    .checkbtn
+    {
+        display: block;
+    }
+    .navbar 
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(200px);
+        background-color: rgba(255, 255, 255, 0.958);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        top: 80px;
+        left: -200%;
+        transition: all 1s cubic-bezier(1,-0.01,0,1.02);
+        text-align: center;
+        border-radius: 20px;
+    }
+    .navbar a
+    {
+        display: block;
+        z-index: 1000;
+        font-size: 30px !important;
+        margin-bottom: 70px !important;
+    }
+    .about
+    {
+        display: flex;
+    }
+    .bg01
+    {
+        display: none;
+    }
+    .about-content
+    {
+        background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border-radius: 20px !important;
+        border-bottom:1px solid rgba(255, 255, 255, 0.18) !important;
+        border-right:1px solid transparent !important;
+        border-left:1px solid transparent !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37) !important;
+        max-width: 588vw !important;
+    }
+    .about-content ul li
+    {
+        font-size: 3.3vw !important;
+        margin-left: 0% !important;
+    }
+    footer
+    {
+        font-size: 0.4em !important;
+        width: 110vw !important;
+        display: flex;
+        flex-direction: column;
+    }
+    footer nav ul li,a
+    {
+        margin: 10px !important;
+        text-align: center !important;
+    }
+    footer .links a
+    {
+        font-size: 5em !important
+    }
+}
+
+@media (min-width: 952px)
+{
+    .flip-card:hover
+    {
+        width: 720px;
+        animation: blur 1s forwards;
+    }
+
+    @keyframes blur
+    {
+        from{
+            backdrop-filter: blur(10px);
+        }
+        to{
+            backdrop-filter: blur(20px);
+        }
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .logo
@@ -79,7 +269,6 @@ body
     align-items: center;
     padding: 0px 10%;
     background-color: transparent;
-    overflow: hidden;
 }
 
 .home-content
@@ -148,8 +337,8 @@ body
 
 .social
 {
-    margin-top: 4%;
-    position: absolute;
+    margin-top: 10% ;
+    position: relative;
 }
 
 .social a
@@ -215,8 +404,8 @@ body
 {
     position:relative;
     left: 8.2%; 
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 30vw;
     transition: all 0.5s;
     perspective: 900px;
     animation: card 2s cubic-bezier(1,-0.01,0,1.02);
@@ -261,13 +450,6 @@ body
         left: 8.2%; 
     }
 } 
-
-.shr
-{
- width: 100%;
- height: 100px;
- background-color: #000000;
-}
 
 .about
 {
@@ -350,6 +532,13 @@ ul .fa-solid
     margin: 3%;
 }
 
+.shr
+{
+    background-color: #000000;
+    width: 100%;
+    height: 4vh;
+}
+
 .space
 {
     background-image: url(../images/space.png);
@@ -389,6 +578,7 @@ ul .fa-solid
     perspective: 1000px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .cer .des
@@ -432,26 +622,6 @@ ul .fa-solid
     margin-left: 20px;
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card:hover
-{
-    width: 720px;
-    animation: blur 1s forwards;
-}
-
-@keyframes blur
-{
-    from{
-        backdrop-filter: blur(10px);
-    }
-    to{
-        backdrop-filter: blur(20px);
-    }
-}
-
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -475,20 +645,20 @@ ul .fa-solid
 
 .flip-card-front img
 {
-    width: 160px;
-    height: 160px;
+    width: 130px;
+    height: 130px;
 }
 
 .flip-card-front .mah
 {
-    top: -25px;
+    top: 19px;
     position: relative;
     left: 0px;
 }
 
 .flip-card-front h3
 {
-    top: 15px;
+    top: 53px;
     position: relative;
     left: 0px;
 }
@@ -562,6 +732,11 @@ footer
     width: 100%;
     height: 300px;
     background-color: #000000;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     /* justify-content: center;
     align-content: center;
     display: flex;
