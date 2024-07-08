@@ -551,6 +551,7 @@ ul .fa-solid
     background-image: url(../images/space.png);
     position: absolute;
     height: 1400px;
+    top: 10px;
     width: 1400px;
     animation: 20s infinite space linear;
     z-index: -1;
