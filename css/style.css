@@ -275,6 +275,7 @@ body
     align-items: center;
     padding: 0px 10%;
     background-color: transparent;
+    overflow: hidden;
 }
 
 .home-content
