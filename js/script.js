@@ -1,8 +1,8 @@
-window.onload = function() {
+window.onload = function () {
     window.scrollTo(0, 0);
-  }
-  
-  document.getElementById('check').addEventListener('change', function() {
+}
+
+document.getElementById('check').addEventListener('change', function () {
     const navbar = document.querySelector('.navbar');
     if (this.checked) {
         navbar.style.left = '0';
@@ -15,5 +15,5 @@ window.onload = function() {
     } else {
         checkbtn.style.color = '#000000';
     }
-    
+
 });
