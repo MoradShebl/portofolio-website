@@ -218,6 +218,10 @@ body
     {
         display: none !important;
     }
+    .container
+    {
+        display: none !important;
+    }
 }
 
 @media (min-width: 952px)
@@ -281,10 +285,10 @@ body
     height: 100vh;
     display: flex;
     align-items: center;
+    align-content: center;
     flex-wrap: nowrap;
     padding: 0px 10%;
     background-color: transparent;
-    overflow: hidden;
 }
 
 .home-content
