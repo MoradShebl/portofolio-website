@@ -210,6 +210,14 @@ body
         margin-right: 0% !important;
         width: 100% !important;
     }
+    .sec
+    {
+        flex-wrap: wrap !important;
+    }
+    .des
+    {
+        display: none !important;
+    }
 }
 
 @media (min-width: 952px)
@@ -273,6 +281,7 @@ body
     height: 100vh;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     padding: 0px 10%;
     background-color: transparent;
     overflow: hidden;
@@ -635,6 +644,7 @@ ul .fa-solid
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 20px;
     backface-visibility: hidden;
@@ -674,7 +684,10 @@ ul .fa-solid
 .flip-card-back {
     transform: rotateY(180deg);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     background: linear-gradient(135deg, Orgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -809,6 +822,7 @@ footer nav ul li:hover a
 .fff p
 {
     color: #ffffff;
+    white-space: nowrap;
 }
 
 .fff p a
