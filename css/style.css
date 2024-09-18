@@ -578,7 +578,7 @@ body {
     max-height: 106vh;
     display: flex;
     align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     border-radius: 20px;
     justify-content: flex-start;
@@ -587,6 +587,7 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     overflow-x: hidden;
     z-index: 10000;
+    align-items: center;
 }
 
 .biodiv:hover {
@@ -600,6 +601,7 @@ body {
 
 .bio p {
     font-size: 1.5em;
+    text-align: center;
 }
 
 .bio h2 {
