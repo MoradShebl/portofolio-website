@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://moradshebl.github.io/portofolio-website/sitemap.xml
