@@ -1,6 +1,3 @@
-window.onload = function () {
-    window.scrollTo(0, 0);
-}
 
 document.getElementById('check').addEventListener('change', function () {
     const navbar = document.querySelector('.navbar');
