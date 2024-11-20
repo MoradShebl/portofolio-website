@@ -6,48 +6,22 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://moradshebl.github.io/portofolio-website/</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
+  <lastmod>2024-11-18T07:13:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#home</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
+  <loc>https://moradshebl.github.io/portofolio-website/website%20project.html</loc>
+  <lastmod>2024-11-18T07:13:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#about</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://moradshebl.github.io/portofolio-website/index.html</loc>
+  <lastmod>2024-11-18T07:13:11+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#ex</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#edu</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#prj</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/index.html#cer</loc>
-  <lastmod>2024-11-17T18:38:23+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/images/Person.png</loc>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://moradshebl.github.io/portofolio-website/images/logo.png</loc>
-  <priority>0.80</priority>
-</url>
+
 
 </urlset>
