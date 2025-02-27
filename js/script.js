@@ -1,4 +1,3 @@
-
 document.getElementById('check').addEventListener('change', function () {
     const navbar = document.querySelector('.navbar');
     if (this.checked) {
@@ -12,5 +11,4 @@ document.getElementById('check').addEventListener('change', function () {
     } else {
         checkbtn.style.color = '#000000';
     }
-
 });
