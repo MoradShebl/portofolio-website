@@ -175,7 +175,12 @@ body {
   }
 
   .checkbtn {
-    display: block;
+    display: block !important;
+  }
+
+  #check{
+    opacity: 1;
+    display: block !important;
   }
 
   .navbar {
@@ -348,19 +353,8 @@ body {
 }
 
 #check {
-  display: none;
-}
-
-.visible {
-  width: 100vw;
-  height: 100vw;
-  position: fixed;
-  backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 10000;
-  display: none;
   opacity: 0;
-  transition: all 0.5 var(--cub);
+  display: none;
 }
 
 .logo {
@@ -489,7 +483,7 @@ body {
 }
 
 .btn-box a {
-  font-size: 1.7vw;
+  font-size: 25px;
   color: var(--second);
   text-decoration: none;
   transition: all 0.5s var(--cub);
@@ -523,6 +517,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0);
   padding: 7px;
   transition: all 0.5s var(--cub);
+  font-size: 35px;
 }
 
 .social a:hover {
@@ -649,6 +644,7 @@ body {
   overflow-x: hidden;
   z-index: 10000;
   align-items: center;
+  margin: 100px 0px 100px 1px;
 }
 
 .biodiv:hover {
@@ -667,6 +663,10 @@ body {
 
 .bio h2 {
   font-size: 3em;
+}
+
+.biop{
+  height: auto !important;
 }
 
 .shr {
@@ -838,8 +838,8 @@ ul .fa-solid {
 }
 
 .placeholder {
-  width: 424px;
-  height: 500px;
+  width: 330px;
+  height: 390px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -857,7 +857,7 @@ ul .fa-solid {
 
 .plchldcnt {
   background-color: var(--main);
-  height: 220px;
+  height: 45%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -865,7 +865,6 @@ ul .fa-solid {
   justify-content: space-evenly;
   top: 56%;
   position: relative;
-  padding: 10%;
   border-top: 1px var(--second) solid;
 }
 
@@ -899,7 +898,7 @@ ul .fa-solid {
 }
 
 .placeholder img {
-  width: 424px;
+  width: 330px;
   z-index: -1;
   position: absolute;
 }
@@ -914,6 +913,7 @@ ul .fa-solid {
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
+  padding: 0px !important;
 }
 
 .prj-content {
@@ -1531,3 +1531,47 @@ footer nav ul li:hover a {
   color: #ffffff;
   background-color: var(--second);
 }
+
+
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    Orgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: black;
+  position: fixed;
+  z-index: 99;
+  display: none;
+  opacity: 0;
+}
+
+.header:hover .blur {
+  display: block !important;
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes stopblur {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
